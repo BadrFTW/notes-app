@@ -84,14 +84,14 @@ const Todo: FC<Props> = ({
                 {editing ? (
                     <button
                         onClick={handleSave}
-                        className="bg-green-600 text-green-50 rounded px-2 w-14 py-1"
+                        className="bg-[#DEE791] text-black rounded px-2 w-14 py-1"
                     >
                         Save
                     </button>
                 ) : (
                     <button
                         onClick={handleEdit}
-                        className="bg-blue-400 text-blue-50 rounded w-14 px-2 py-1"
+                        className="bg-[#DEE791] text-black rounded w-14 px-2 py-1"
                     >
                         Edit
                     </button>
@@ -99,14 +99,14 @@ const Todo: FC<Props> = ({
                 {editing ? (
                     <button
                         onClick={handleCancel}
-                        className="bg-red-400 w-16 text-red-50 rounded px-2 py-1"
+                        className="bg-[#FFD6BA] text-black w-16 rounded px-2 py-1"
                     >
                         Close
                     </button>
                 ) : (
                     <button
                         onClick={handleDelete}
-                        className="bg-red-400 w-16 text-red-50 rounded px-2 py-1"
+                        className="bg-[#FFD6BA] text-black rounded px-2 py-1"
                     >
                         Delete
                     </button>
