@@ -4,14 +4,7 @@
 import { db } from "@/db/drizzle";
 import { users} from "@/db/schema";
 ;
-type newUser ={
-    clerkId:string ,
-    email: string,
-    name: string,
-    firstName: string | null,
-    lastName: string | null,
-    photo: string,
-}
+
 export const getAllUsers = async () => {
     const data = await db.select().from(users);
     return data;
@@ -25,6 +18,7 @@ type ClerkData = {
     lastName: string ;
     photo: string;
 };
+
 /* eslint-disable @typescript-eslint/no-explicit-any */
 export const addUser = async (user: any) => {
 
@@ -74,5 +68,6 @@ export const getUser = async ({
 
     return user;
 };
+
 
 
