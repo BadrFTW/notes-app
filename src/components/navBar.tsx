@@ -16,7 +16,7 @@ const Navbar = () => {
                 {isSignedIn ? (
                     <>
 
-                            <SignOutButton className={"cursor-pointer border py-1 px-2 rounded-full bg-gray-200 border-gray-500"}  />
+                            <SignOutButton  />
 
 
                         <UserButton  />

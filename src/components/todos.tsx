@@ -3,13 +3,13 @@ import { FC, useState } from "react";
 import { todoType } from "@/types/todoType";
 import Todo from "./todo";
 import AddTodo from "./addTodo";
-
+import {userType} from "@/types/userType";
 import {addTodo,deleteTodo,toggleTodo,editTodo} from "@/actions/todoActions";
-import {addUser} from "@/actions/userActions";
+;
 
 interface Props {
     todos: todoType[];
-    user: any;
+    user: userType;
 }
 
 const Todos: FC<Props> = ({ todos,user }) => {

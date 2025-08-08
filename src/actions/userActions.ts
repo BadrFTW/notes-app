@@ -1,8 +1,9 @@
 "use server";
-import { eq } from "drizzle-orm";
-import { revalidatePath } from "next/cache";
+
+
 import { db } from "@/db/drizzle";
 import { users} from "@/db/schema";
+import {userType} from "@/types/userType";
 
 export const getAllUsers = async () => {
     const data = await db.select().from(users);
@@ -18,7 +19,7 @@ type ClerkData = {
     photo: string;
 };
 
-export const addUser = async (user: any) => {
+export const addUser = async (user: userType) => {
     await db
         .insert(users)
         .values({
