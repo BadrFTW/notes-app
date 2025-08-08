@@ -3,23 +3,31 @@
 
 import { db } from "@/db/drizzle";
 import { users} from "@/db/schema";
-import {userType} from "@/types/userType";
-
+;
+type newUser ={
+    clerkId:string ,
+    email: string,
+    name: string,
+    firstName: string | null,
+    lastName: string | null,
+    photo: string,
+}
 export const getAllUsers = async () => {
     const data = await db.select().from(users);
     return data;
 }
 
 type ClerkData = {
-    clerkId: string;
+    clerkId: string ;
     name: string;
     email: string;
-    firstName: string;
-    lastName: string;
+    firstName: string ;
+    lastName: string ;
     photo: string;
 };
+/* eslint-disable @typescript-eslint/no-explicit-any */
+export const addUser = async (user: any) => {
 
-export const addUser = async (user: userType) => {
     await db
         .insert(users)
         .values({

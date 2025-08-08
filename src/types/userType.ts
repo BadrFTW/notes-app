@@ -1,12 +1,12 @@
 
 export type userType = {
-    id: number,
+    id: number;
+    clerkId:string,
     name: string,
     email: string,
-    clerkId:string,
-    firstName: string,
-    lastName: string,
+    firstName: string | null,
+    lastName: string | null,
     photo: string,
-    createdAt: Date,
-    updatedAt: Date,
+
+
 };
